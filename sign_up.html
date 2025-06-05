@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up - Car Duniya</title>
+  <link rel="stylesheet" href="signup.css"/>
+</head>
+<body>
+
+<nav class="navbar">
+  <ul class="nav_link">
+    <li>CAR DUNIYA</li>
+    <li><a href="index.html" target="_blank">HOME</a></li>
+    <li><a href="login.html" target="_blank">LOGIN</a></li>
+    <li><a href="#" target="_blank">ABOUT</a></li>
+    <li><a href="#" target="_blank">REVIEWS</a></li>
+   <div id="getstarted"><a href="#">GET STARTED</a></div>
+  </ul>
+</nav>
+
+<div class="container">
+  <form class="signup-form">
+    <h2>Create your account</h2>
+    <p>Enter your personal details to create account</p>
+
+    <div class="form-group name-group">
+      <input type="text" placeholder="First name" required>
+      <input type="text" placeholder="Last name" required>
+    </div>
+
+    <div class="form-group">
+      <input type="email" placeholder="Test@gmail.com" required>
+    </div>
+
+    <div class="form-group password-group">
+      <input type="password" placeholder="**********" id="password" required>
+      <span class="toggle-password" onclick="togglePassword()">Show</span>
+    </div>
+
+    <div class="form-group checkbox-group">
+      <input type="checkbox" required>
+      <label>Agree with <a href="#">Privacy Policy</a></label>
+    </div>
+
+    <button type="submit" class="create-btn">Create Account</button>
+
+    <div class="social-signup">
+      <p>Or signup with</p>
+      <div class="social-buttons">
+        <button class="linkedin">LinkedIn</button>
+        <button class="twitter">Twitter</button>
+        <button class="facebook">Facebook</button>
+      </div>
+    </div>
+
+    <p class="signin-link">Already have an account? <a href="#">Sign in</a></p>
+  </form>
+</div>
+
+<script>
+  function togglePassword() {
+    const pwd = document.getElementById("password");
+    const toggle = document.querySelector(".toggle-password");
+    if (pwd.type === "password") {
+      pwd.type = "text";
+      toggle.textContent = "Hide";
+    } else {
+      pwd.type = "password";
+      toggle.textContent = "Show";
+    }
+  }
+</script>
+
+</body>
+</html>
